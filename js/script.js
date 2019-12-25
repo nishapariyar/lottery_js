@@ -1,7 +1,7 @@
 function guessNumber() {
     console.log("guessNumber");
 
-    var randomnum = Math.floor(Math.random() * 6 + 1);
+    var randomnum = Math.floor(Math.random() * 100 + 1);
     var nameValue = document.getElementsByName("name")[0].value;
     var address = document.getElementsByName("address")[0].value;
     var phnum = document.getElementsByName("contact")[0].value;
@@ -9,10 +9,12 @@ function guessNumber() {
     
     if (randomnum==guessnum)
     {
-        alert("you won");
+        var msg = nameValue.concat(" ",address," ",phnum);
+        alert(msg.concat("\nyou win"));
     }
     else
     {
-        alert("you loose");
+        var msg = nameValue.concat(" ",address," ",phnum);
+        alert(msg.concat("\nyou loose"));
     }
 }
